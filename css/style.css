@@ -1,0 +1,15 @@
+/* ===================== Global variables =======================*/
+/* =====================      Header      =======================*/
+#title {
+  background-color: #333;
+  color: white; }
+
+/* =====================       News       =======================*/
+tr {
+  background-color: white;
+  border-bottom: 1px solid #ccc; }
+
+tr:hover {
+  background-color: #fafafa; }
+
+/*# sourceMappingURL=style.css.map */

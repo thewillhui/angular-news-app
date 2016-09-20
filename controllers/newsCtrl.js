@@ -7,7 +7,7 @@ angular.module('hackerNews.controllers', [])
       .get('http://hn.algolia.com/api/v1/search_by_date?query=angular')
       .then(function(resp){
         console.log(resp.data)
-        $scope.news = resp.data
+        $scope.news = resp.data.hits
       })
   }
 

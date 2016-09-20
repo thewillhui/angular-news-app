@@ -1,0 +1,27 @@
+/* ===================== Global variables =======================*/
+
+$darkGrey: #333;
+$authorGrey: #999;
+$tableHover: #fafafa;
+
+
+
+/* =====================      Header      =======================*/
+
+#title{
+  background-color: $darkGrey;
+  color: white;
+}
+
+
+
+/* =====================       News       =======================*/
+
+tr {
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+}
+
+tr:hover {
+  background-color: $tableHover;
+}
