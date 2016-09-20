@@ -4,24 +4,38 @@ $darkGrey: #333;
 $authorGrey: #999;
 $tableHover: #fafafa;
 
-
-
 /* =====================      Header      =======================*/
 
-#title{
-  background-color: $darkGrey;
-  color: white;
+#title {
+    background-color: $darkGrey;
+    color: white;
+  .jumbotron {
+    margin-bottom: 0;
+  }
 }
-
 
 
 /* =====================       News       =======================*/
 
-tr {
-  background-color: white;
-  border-bottom: 1px solid #ccc;
-}
-
-tr:hover {
-  background-color: $tableHover;
+.table.news {
+    td {
+        border-bottom: 1px solid #ccc;
+        border-top: 0px;
+        padding: 15px;
+      .title {
+        color: $darkGrey;
+        font-size: 13pt;
+      }
+      .author {
+        color: $authorGrey;
+        font-size: 13pt;
+      }
+    }
+    tr {
+        background-color: white;
+    }
+    tr:hover {
+        background-color: $tableHover;
+        cursor: pointer;
+    }
 }

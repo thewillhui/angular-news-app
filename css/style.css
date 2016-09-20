@@ -3,13 +3,24 @@
 #title {
   background-color: #333;
   color: white; }
+  #title .jumbotron {
+    margin-bottom: 0; }
 
 /* =====================       News       =======================*/
-tr {
-  background-color: white;
-  border-bottom: 1px solid #ccc; }
-
-tr:hover {
-  background-color: #fafafa; }
+.table.news td {
+  border-bottom: 1px solid #ccc;
+  border-top: 0px;
+  padding: 15px; }
+  .table.news td .title {
+    color: #333;
+    font-size: 13pt; }
+  .table.news td .author {
+    color: #999;
+    font-size: 13pt; }
+.table.news tr {
+  background-color: white; }
+.table.news tr:hover {
+  background-color: #fafafa;
+  cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */

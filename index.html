@@ -9,6 +9,9 @@
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="controllers/newsCtrl.js"></script>
   <script src="app.js"></script>
+  <script src="bower_components/moment/min/moment.min.js"></script>
+  <script src="bower_components/angular-moment/angular-moment.min.js"></script>
+
   <title>HackerNews</title>
 </head>
 <body>
@@ -20,13 +23,18 @@
   </div>
 </section>
 
-<section id="news" ng-controller="newsCtrl">
+<section id="news" class="container" ng-controller="newsCtrl">
 
-  <table class="table">
-    <tr ng-repeat="newsObj in news">
-      <td ng-show="newsObj.title===null">{{newsObj.story_title}} - {{newsObj.author}} -</td>
-      <td ng-show="newsObj.title!==null">{{newsObj.title}} - {{newsObj.author}} -</td>
-      <td >{{newsObj.created_at}}</td>
+  <table class="table news">
+    <tr ng-repeat="newsObj in news" ng-click="go(newsObj)">
+      <td ng-show="newsObj.title===null">
+      <span class="title">{{newsObj.story_title}}</span>
+      <span class="author">  - {{newsObj.author}} -</span></td>
+      <td ng-show="newsObj.title!==null">
+      <span class="title">{{newsObj.title}}</span>
+      <span class="author">  - {{newsObj.author}} -</span></td>
+      <td ><span am-time-ago="newsObj.created_at"></span></td>
+      <td ><span ng-click="" class="glyphicon glyphicon-trash" aria-hidden="true"></span></td>
     </tr>
   </table>
 
