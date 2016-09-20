@@ -16,29 +16,31 @@
 </head>
 <body>
 
-<section id="title" class="jumbotron">
-  <div class="container-fluid">
-    <h1>HN Feed</h1>
-    <h2>We &#60;3 hacker news!</h2>
-  </div>
-</section>
+  <section id="title" class="jumbotron">
+    <div class="container-fluid">
+      <h1>HN Feed</h1>
+      <h2>We &#60;3 hacker news!</h2>
+    </div>
+  </section>
 
-<section id="news" class="container" ng-controller="newsCtrl">
-
-  <table class="table news">
-    <tr ng-repeat="newsObj in news" ng-click="go(newsObj)">
-      <td ng-show="newsObj.title===null">
-      <span class="title">{{newsObj.story_title}}</span>
-      <span class="author">  - {{newsObj.author}} -</span></td>
-      <td ng-show="newsObj.title!==null">
-      <span class="title">{{newsObj.title}}</span>
-      <span class="author">  - {{newsObj.author}} -</span></td>
-      <td ><span am-time-ago="newsObj.created_at"></span></td>
-      <td ><span ng-click="" class="glyphicon glyphicon-trash" aria-hidden="true"></span></td>
-    </tr>
-  </table>
-
-</section>
+  <section id="news" class="container-fluid" ng-controller="newsCtrl">
+    <div class="news row" ng-repeat="newsObj in news" ng-click="go(newsObj)">
+      <div class="col-sm-9" ng-show="newsObj.title===null">
+        <span class="title">{{newsObj.story_title}}</span>
+        <span class="author">  - {{newsObj.author}} -</span>
+      </div>
+      <div class="col-sm-9" ng-show="newsObj.title!==null">
+        <span class="title">{{newsObj.title}}</span>
+        <span class="author">  - {{newsObj.author}} -</span>
+      </div>
+      <div class="col-sm-2">
+        <span am-time-ago="newsObj.created_at"></span>
+      </div>
+      <div class="col-sm-1">
+        <span ng-click="" class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>

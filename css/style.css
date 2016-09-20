@@ -2,24 +2,25 @@
 /* =====================      Header      =======================*/
 #title {
   background-color: #333;
-  color: white; }
-  #title .jumbotron {
-    margin-bottom: 0; }
+  color: white;
+  margin-bottom: 0; }
+  #title h1 {
+    font-size: 10rem; }
 
 /* =====================       News       =======================*/
-.table.news td {
+.news.row {
+  background-color: white;
   border-bottom: 1px solid #ccc;
   border-top: 0px;
-  padding: 15px; }
-  .table.news td .title {
+  padding: 18px; }
+  .news.row .title {
     color: #333;
     font-size: 13pt; }
-  .table.news td .author {
+  .news.row .author {
     color: #999;
     font-size: 13pt; }
-.table.news tr {
-  background-color: white; }
-.table.news tr:hover {
+
+.row:hover {
   background-color: #fafafa;
   cursor: pointer; }
 
