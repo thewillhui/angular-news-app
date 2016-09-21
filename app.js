@@ -1,1 +1,1 @@
-var app = angular.module('hackerNews', ['hackerNews.controllers', 'angularMoment'])
+var app = angular.module('hackerNews', ['hackerNews.controllers', 'hackerNews.services', 'angularMoment'])

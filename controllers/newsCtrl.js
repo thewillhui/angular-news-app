@@ -1,26 +1,22 @@
 angular.module('hackerNews.controllers', [])
-  .controller('newsCtrl', ['$scope', '$http', '$window', function($scope, $http, $window) {
+  .controller('newsCtrl', ['$scope', '$http', '$window', 'news', function($scope, $http, $window, news) {
 
-  var getNews = function() {
-    $http
-      .get('http://hn.algolia.com/api/v1/search_by_date?query=angular')
-      .then(function(resp){
-        $scope.news = resp.data.hits
-      }, function(error){
-        console.log(error)
-      })
+  getNews();
+
+  function getNews() {
+    news.list().then(function(resp){
+      $scope.news = resp.data.hits;
+    })
   }
-
-  getNews()
 
   $scope.go = function(newsObj){
-    $window.open(newsObj.story_url)
-  }
+    $window.open(newsObj.story_url);
+  };
 
   $scope.deleteRow = function(newsObj){
-    var index = $scope.news.indexOf(newsObj)
-    $scope.news.splice(index,1)
+    var index = $scope.news.indexOf(newsObj);
+    $scope.news.splice(index,1);
   }
 
 
-}])
+}]);
