@@ -4,6 +4,14 @@ $darkGrey: #333;
 $authorGrey: #999;
 $tableHover: #fafafa;
 
+html, body {
+  font-size: 14px;
+}
+
+.container{
+  width: 90%;
+}
+
 /* =====================      Header      =======================*/
 
 #title {
@@ -11,7 +19,7 @@ $tableHover: #fafafa;
     color: white;
     margin-bottom: 0;
   h1{
-    font-size: 10rem;
+    font-size: 6rem;
   }
 }
 

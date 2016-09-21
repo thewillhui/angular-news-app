@@ -2,6 +2,7 @@
 <html lang="en" ng-app="hackerNews">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -23,21 +24,21 @@
     </div>
   </section>
 
-  <section id="news" class="container-fluid" ng-controller="newsCtrl">
+  <section id="news" class="container" ng-controller="newsCtrl">
     <div class="news row" ng-repeat="newsObj in news" ng-click="go(newsObj)">
-      <div class="col-sm-9" ng-show="newsObj.title===null">
+      <div class="col-xs-8 col-sm-9" ng-show="newsObj.title===null">
         <span class="title">{{newsObj.story_title}}</span>
         <span class="author">  - {{newsObj.author}} -</span>
       </div>
-      <div class="col-sm-9" ng-show="newsObj.title!==null">
+      <div class="col-xs-8 col-sm-9" ng-show="newsObj.title!==null">
         <span class="title">{{newsObj.title}}</span>
         <span class="author">  - {{newsObj.author}} -</span>
       </div>
-      <div class="col-sm-2">
+      <div class="col-xs-2">
         <span am-time-ago="newsObj.created_at"></span>
       </div>
-      <div class="col-sm-1">
-        <span ng-click="" class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+      <div class="col-xs-2 col-sm-1">
+        <span ng-click="deleteRow(newsObj);$event.stopPropagation()" class="glyphicon glyphicon-trash" aria-hidden="true"></span>
       </div>
     </div>
   </section>

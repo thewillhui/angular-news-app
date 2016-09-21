@@ -17,9 +17,9 @@ angular.module('hackerNews.controllers', [])
     $window.open(newsObj.story_url)
   }
 
-  $scope.delete = function(){
-    $http
-      .delete('http://hn.algolia.com/api/v1/search_by_date?query=angular')
+  $scope.deleteRow = function(newsObj){
+    var index = $scope.news.indexOf(newsObj)
+    $scope.news.splice(index,1)
   }
 
 
