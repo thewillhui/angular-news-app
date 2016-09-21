@@ -27,7 +27,7 @@
   </section>
 
   <section id="news" class="container" ng-controller="newsCtrl">
-    <div class="news row" ng-repeat="newsObj in news" ng-click="go(newsObj)">
+    <div class="news row" ng-repeat="newsObj in news | orderBy:created_at" ng-click="go(newsObj)">
       <div class="col-xs-8 col-sm-9" ng-show="newsObj.title===null">
         <span class="title">{{newsObj.story_title}}</span>
         <span class="author">  - {{newsObj.author}} -</span>
